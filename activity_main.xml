@@ -35,9 +35,6 @@
     <View
         android:layout_width="wrap_content"
         android:layout_height="2dp"
-        android:layout_below="@+id/tv"
-        android:layout_alignLeft="@+id/tv"
-        android:layout_alignRight="@+id/tv"
         android:background="#008577" />
 
     <LinearLayout
