@@ -8,11 +8,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-    public class MainActivity extends Activity {
+public class MainActivity extends Activity {
         private Button bt0, bt1, bt2, bt3, bt4, bt5, bt6, bt7, bt8, bt9, bt_C, bt_jia, bt_jian, bt_cheng, bt_chu, bt_equal;
         private TextView textView;
         private EditText editText;
-        private String opt = "+";//操作符
+        private String opt = "";//操作符
         private int n1 = 0, n2 = 0;
         private View.OnClickListener lisenter = new View.OnClickListener() {
 
@@ -140,6 +140,13 @@ import android.widget.TextView;
                     }
                     case R.id.bt_equal:// =
                     {
+                        if(opt=="")
+                        {
+                            String str = editText.getText().toString();
+                            n2 = Integer.parseInt(str);
+                            textView.setText(n2 + "=");
+                            editText.setText((double)n2 + "");
+                        }
                         if(opt == "+")
                         {
                             String str = editText.getText().toString();
@@ -176,9 +183,8 @@ import android.widget.TextView;
                                 textView.setText(n1 + opt + n2 + "=");
                                 editText.setText((double)(n1)/(double)(n2)+"");
                             }
+                            break;
                         }
-
-                        break;
                     }
                 }
             }
