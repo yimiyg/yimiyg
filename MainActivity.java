@@ -24,7 +24,7 @@ import android.widget.TextView;
                 switch (btn.getId()) {
                     case R.id.bt_0://0
                     {
-                        textView.setText(n1 + "+" + 10);
+                        //textView.setText(n1 + "+" + 10);
                         editText.setText(editText.getText().toString() + 0);
                         String str = editText.getText().toString();
                         textView.setText(str);
